@@ -19,36 +19,116 @@ h1, h2, h3 {
 	text-transform: uppercase;
 }
 
-#header {
+/* HEADER */
+header {
 	width: 90%;
+	margin: auto;
+	height: 100vh;
 }
 
 h1 {
-	font-size: 120px;
+	font-size: 9em;
 	font-weight: 500;
-}
+	padding: 0;
 }
 
+.title {
+	box-sizing: border-box;
+	width: 45%;
+	border: 1px solid red;
+	float: left;
+	margin: 0;
+	z-index: 1;
+}
+figure {
+	float: left;
+	width: 55%;
+	margin: 0;
+ }
+
+header figure img {
+	width: 100%;
+}
+ 
+ header::after {
+	content: "";
+	display: table;
+	clear: both;
+ }
+
+/* CONTENT */
 h2 {
 	text-align: center;
 	margin-bottom: 2em;
 }
 
-#about, #quote {
+section:nth-of-type(odd) {
 	background-color: #bc6c25;
 	color: #fefae0;
 	width: 60%;
 	margin: 2% auto;
-	padding: 3% 5%;
-	border-radius: 10px;
+	padding: 2rem 3rem;
+	border-radius: 20px;
+	text-align: justify;
 }
 
-footer {
-	background-color: #283618;
+section:nth-of-type(even) {
+	width: 90%;
+	margin: 3rem auto;
+	text-align: justify;
+}
+
+/* WORKS */
+#works::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.series {
+	width: calc(33.33% - 2rem);
+	height: 17rem;
+	float:left;
+	box-sizing: border-box;
+	border: 0.25rem solid rgba(188, 108, 37, 0.5);
+	border-radius: 20px;
+	margin: 0 1rem;
 	text-align: center;
-	padding: 10px;
 }
 
+.series ul {
+	list-style-type: none;
+}
+
+/* QUOTE */
+blockquote{
+	position: relative;
+	font-size: 1.25rem;
+	padding: .5rem;
+}
+blockquote::before, blockquote::after {
+	font-family: Georgia;
+	color: #bc6c25;
+	font-size: 6em;
+	opacity: 0.5;
+	position: absolute;
+	display: block;
+	width: 3rem;
+	height: 3rem;
+}
+
+blockquote::before {
+	content: "“";
+	left: -3rem;
+	top: -1.5rem;
+}
+
+blockquote::after {
+	content: "”";
+	right: -3rem;
+	bottom: 1rem;
+}
+
+/* FOOTER */
 a {
 	text-transform: uppercase;
 	color: #fefae0;
@@ -58,4 +138,11 @@ a:hover {
 	color: #dda15e;
 	text-decoration: none;
 }
+
+footer {
+	background-color: #283618;
+	text-align: center;
+	padding: 10px;
+}
+
 
