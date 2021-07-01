@@ -6,6 +6,20 @@ Couleur-bg : #fefae0
 Couleur-texte : #333533
 */
 
+/* RESET */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/* GENERAL */
+
 body {
 	background-color: #fefae0;
 	color: #283618;
@@ -13,6 +27,7 @@ body {
 	font-family: 'Quicksand';
 	font-weight: 400;
 	margin: 0;
+	margin-top: 0;
 }
 
 h1, h2, h3 {
@@ -20,10 +35,14 @@ h1, h2, h3 {
 }
 
 /* HEADER */
+
 header {
-	width: 90%;
-	margin: auto;
+	box-sizing: border-box;
 	height: 100vh;
+	padding: 18vh 0;
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
 }
 
 h1 {
@@ -32,53 +51,41 @@ h1 {
 	padding: 0;
 }
 
-.title {
-	box-sizing: border-box;
-	width: 45%;
-	border: 1px solid red;
-	float: left;
-	margin: 0;
-	z-index: 1;
+header span{
+	font-size: 2em;
 }
-figure {
-	float: left;
-	width: 55%;
-	margin: 0;
- }
 
-header figure img {
-	width: 100%;
-}
- 
- header::after {
-	content: "";
-	display: table;
-	clear: both;
- }
-
-/* CONTENT */
-h2 {
-	text-align: center;
-	margin-bottom: 2em;
-}
+/* MAIN CONTENT*/
 
 section:nth-of-type(odd) {
 	background-color: #bc6c25;
 	color: #fefae0;
 	width: 60%;
-	margin: 2% auto;
-	padding: 2rem 3rem;
+	margin: 0 auto;
+	padding: 3rem;
 	border-radius: 20px;
 	text-align: justify;
 }
 
 section:nth-of-type(even) {
-	width: 90%;
+	width: 80%;
 	margin: 3rem auto;
 	text-align: justify;
 }
 
+h2 {
+	font-size: 1.5rem;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
 /* WORKS */
+
+h3 {
+	font-size: 1.25rem;
+	margin: 1.15rem 0;
+}
+
 #works::after{
 	content: "";
 	display: table;
@@ -100,6 +107,7 @@ section:nth-of-type(even) {
 }
 
 /* QUOTE */
+
 blockquote{
 	position: relative;
 	font-size: 1.25rem;
@@ -129,6 +137,7 @@ blockquote::after {
 }
 
 /* FOOTER */
+
 a {
 	text-transform: uppercase;
 	color: #fefae0;
@@ -145,4 +154,21 @@ footer {
 	padding: 10px;
 }
 
+/* TOP ICON */
 
+svg {
+	width: 45px;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	fill: #283618;
+	background-color: #fefae0;
+	border: 6px solid #283618;
+	border-radius: 15px;
+	padding: 3px;
+	opacity: 0.7;
+}
+
+svg:hover {
+	opacity: 1;
+}
